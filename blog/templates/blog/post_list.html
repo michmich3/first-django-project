@@ -12,6 +12,15 @@
 		<p> Allez lààà on kiffe mon siiite maggle </p>
 		<p> Ceux qui connaissent pas mon site iol est temps de vous rattraper bordel de cul</p>	
 	</div>
+	{% for post in posts %}
+		<div>
+			<p>published : {{ post.published_date }}</p>
+			<p>By {{ post.author }}</p>
+			<h2><a href="">{{ post.title }} </a></h2>
+			<p>{{ post.text|linebreaksbr }} </p>
+		{{post}}
+		</div>
+	{% endfor %}
 </body>
 
 
